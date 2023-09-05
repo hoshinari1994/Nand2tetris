@@ -42,5 +42,8 @@ CHIP ALU {
         ng; // 1 if (out < 0),  0 otherwise
 
     PARTS:
-   // Put you code here:
+        //zx 16bitまとめて0を入れる方法は？
+            Mux16(a[16]=x[16], b[16]=0, sel=zx, out[16]=w1);
+        //zy
+            Mux16(a[16]=y[16], b[16]=0, sel=zy, out[16]=w2);
 }
